@@ -4,24 +4,35 @@
     font-family: sans-serif;
 
 }
+#paragraph::selection{
+    background-color: blue;
+    color: red;
+}
+#paragraph::first-letter{
+    background-color:white;
+    font-size: 30px;
+    color:brown;
+}
 h3{
     background-color: rgb(203, 207, 219);
+    color: red;
 }
 table{
     width: 50%;
-    border: 5em;
+    border: 5px solid #787878;
     font-size: small;
 }
 th{
     background-color: bisque;
     font-size: large;
     font-family: sans-serif;
-    padding: 2px;
-    text-align: center;
-    color: black;}
+    padding: 10px;
+    color: black;
+}
 tr:hover{
     background-color:grey;
     color: blue;
+    padding: 3px;
 }
 
 tr:nth-child(even){
@@ -37,6 +48,7 @@ a:link{
 a:hover{
     color: red;
 }
+
 *
 {
     font-size: larger;

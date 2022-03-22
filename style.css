@@ -1,0 +1,44 @@
+#paragraph{
+    background-color: aquamarine;
+    font-size: large;
+    font-family: sans-serif;
+
+}
+h3{
+    background-color: rgb(203, 207, 219);
+}
+table{
+    width: 50%;
+    border: 5em;
+    font-size: small;
+}
+th{
+    background-color: bisque;
+    font-size: large;
+    font-family: sans-serif;
+    padding: 2px;
+    text-align: center;
+    color: black;}
+tr:hover{
+    background-color:grey;
+    color: blue;
+}
+
+tr:nth-child(even){
+    background-color: cadetblue;
+}
+tr:nth-child(odd){
+    background-color:coral;
+}
+a:link{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+*
+{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}

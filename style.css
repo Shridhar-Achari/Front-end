@@ -49,8 +49,19 @@ a:hover{
     color: red;
 }
 
-*
-{
-    font-size: larger;
-    font-family: 'Times New Roman', Times, serif;
+
+/*Registration Page*/
+#sec2{
+    color:rgb(255, 0, 170);
+    background-image:url(assets/students.jpg);background-repeat: no-repeat;background-size: 100% 100%;
+    width: 600px;
+    border-radius: 30px;
+    box-shadow: 10px 15px 8px red;
+}
+#art-h2{
+    text-align: center;
+    color: blue;
+    text-shadow: 3px 3px 2px yellow;
+    padding: 10px;
+
 }

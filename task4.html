@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*--Float Property--*/
+        .img1{
+            float: left;
+        }
+        .img2{
+            float: right;
+        }
+        /*--Text Effects*/
+        p.p3{
+            width: 200px;
+            border: 2px dashed;
+            border-color: blue;
+            overflow: hidden;/*--overflow clip*/
+            text-overflow: clip;/*--text-overflow clip*/
+            white-space: nowrap;
+        }
+        p.p4{
+            width: 200px;
+            height: 15px;
+            border: 2px dashed;
+            overflow: visible;/*--overflow visible*/
+            text-overflow: ellipsis;/*--text-overflow visible*/
+            white-space: nowrap;
+            border-color: blue;
+        }
+        p.p5:hover{
+            overflow: visible;
+            width:100px;
+            border: 2px dashed;
+            border-color: blue;
+        }
+        p.p6{
+        width: 200px;
+        word-wrap: break-word;
+        border: dotted 2px black;
+    }
+        /*--word wrap--*/
+        p.p7{
+        width: 200px;
+        word-break: break-all;
+        border: dotted 2px black;
+    }
+    p.p8{
+        width: 200px;
+        border: dotted 2px black;
+        writing-mode: vertical-rl;
+    }
+    /*--Pagination--*/
+    .pagination a{
+        color: red;
+        float: left;
+        padding: 15px;
+        text-decoration: none;
+
+    }
+    .pagination {
+        display: inline-block;
+    }
+
+
+    .p9{
+        position: static;
+        left: 20px;
+    }
+    .p10{
+        position: relative;
+        left: 20px;
+    }
+    .p11{
+        position: fixed;
+        left: 20px;
+    }
+    .p12{
+        position: sticky;
+        left: 20px;
+    }
+    
+
+    /*--Links--*/
+    .links a:link{
+        color:rgb(253, 18, 195);
+    }
+    .links a:visited{
+        color: purple;
+    }
+    .links a:active{
+        color: rgb(2, 2, 2);
+    }
+    .links a:hover{
+        color: rgb(58, 226, 43);
+    }
+
+
+    </style>
+</head>
+<body>
+    <h2>Float Property</h2>
+    <h3>--Image float to left--</h3>
+    <p class="p1">
+    <img class="img1" src="assets/Dlithe.png" alt="DLithe" height="100px" width="150px">
+        To support business functions to achieve Customer Experience and Operational Excellence. To build an agile workforce that is competent in Domain, Technology & Personality, catering towards global industry needs. We are committed to providing cost-effective quality services to corporates and academics to achieve their goals.
+    </p><br><br><br><br>
+    <h3>--Image float right</h3>
+    <p class="p2">
+        <img class="img2" src="assets/college.jpg" alt="DLithe" height="100px" width="150px">
+        A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.
+    </p><br><br><br><br>
+
+    <h2>Text Effects</h2>
+        <!--Text Effect-->
+    <p class="p3">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+    <p class="p4">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+    <p class="p5">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+    <h2>--Word wrap--</h2>
+    <p class="p6">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+    <p class="p7">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+    <p class="p8">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+    <h2>Pagination</h2>
+    <div class="pagination">
+        <a href="assets/pic.jpg"target="_blank"title="Previous">&laquo;</a>
+        <a href="assets/Google.png"target="_blank"title="Google">Google</a>
+        <a href="assets/students.jpg"target="_blank"title="Students">Students</a>
+        <a href="assets/Dlithe.png"target="_blank"title="DLithe">DLithe</a>
+        <a href="assets/trees.jpg"target="_blank"title="Trees">Trees</a>
+        <a href="assets/college.jpg"target="_blank"title="College">College</a>
+        <a href="assets/ganesha.jpeg"target="_blank"title="Ganesha">Ganesha</a>
+        <a href="assets/pic.jpg"target="_blank"title="Next">&laquo;</a>
+        <br><br>
+
+        <h2>--Position Types</h2>
+        <p class="p9">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+        <p class="p10">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+        <p class="p11">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+        <p class="p12">A college is an educational institution or a constituent part of one. A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, or a secondary school.</p><br><br>
+       
+    </div>
+
+
+
+    <h2>Links</h2>
+    <div class="links">
+        <a href="https://www.google.com/" target="_blank" title="Google">Click here Google Search </a>
+    </div>
+
+
+
+    
+    
+</body>
+</html>

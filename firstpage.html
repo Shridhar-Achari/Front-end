@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Link Page</title>
     <style>
-        h2{
+        h1{
+            border-style: double;
+            border-color: darkblue;
+            border-width: 15x;
+            border-radius: 20px;
+            text-align: center;
+            background: #009FFF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: white;
+            padding: 15px;
+            text-shadow: 4px 3px red;
+        }
+        #legend1{
+            font-size: 25px;
+            text-shadow: 2px 3px 2pc blue, 4px 3px 2px yellow;
+        }
+        .h2f{
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
             size: 20pt;
@@ -17,6 +34,10 @@
         .s_form{
             color: white;
             size: 10;
+            background: #000000;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         }
         #btn{
             width: 100px;
@@ -24,10 +45,11 @@
             border-radius: 20px;
             border-color: blueviolet;
             color: blue;
-            margin-left: 140px;
+            margin-left: 40px;
             font-size: 20px;
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
+            box-shadow: 5px 6px 4px darkblue;
         }
         #btn:hover{
             color: red;
@@ -36,29 +58,38 @@
         label{
             margin-left: 30px;
         }
-        input,select{
-            padding: 12px,20px;
-            margin: 130px,0;
+        input{
             box-sizing: border-box;
             border-radius: 4px;
             border: 2px;
+            size: 150px;
+            height: 30px;
+        }
+        ul,ol,li{
+            font-size: 20px;
+            text-shadow: 2px 2px 3px black;
+            font-weight: 400;
+            color: bisque;
+
         }
         
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-image: url(assets/pic.jpg);background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;";>
     <header style="text-align: center;background-color: darkslategray;color: antiquewhite;">Registration Page</header>
-    <h1><marquee behavior="scroll" direction="left" bgcolor="yellow"> Welcome To New World!!!</marquee></h1>
-    <h2>Wecome to Student Registration Page</h2>
+    <h1> Welcome To New World!!!</marquee></h1>
+    <h2 class="h2f">Wecome to Student Registration Page</h2>
+    <!--Form and Fieldset-->
     <form class="s_form"action=""method="get">
         <fieldset>
-            <legend>--Student Registration--</legend>
+            <legend id="legend1">--Student Registration--</legend>
             <label for="">Student Name</label>
             <input type="text" name="sname" height="20px" width="100pt" placeholder="Enter your name" onmouseover="color:" required><br><br>
             <label for="">Reg Number</label>
             <input type="number" name="rollno" height="30px"width="70px"placeholder="Enter your roll number" required><br><br>
             <label for="">Address</label>
-            <textarea name="Address" rows="3" cols="30" value="address" required></textarea><br><br>
+            <textarea name="Address" rows="3" cols="30" value="address"placeholder="Enter your full address" required></textarea><br><br>
             <label for="">Email</label>
             <input type="email" name="email"height="10px"placeholder="Enter your email" required><br><br>
             <label for="">Password</label>
@@ -72,7 +103,7 @@
             <input type="radio" id="gender" value="Male">Male
             <input type="radio" id="gender" value="Female">Female<br><br>
             <label for="">Branch</label>
-            <select name="Branch" aria-checked="false">
+            <select id="select1"name="Branch" aria-checked="false">
                 <optgroup label="Science">
                     <option value="pcmb">PCMB</option>
                     <option value="pcmc">PCMC</option>
@@ -92,7 +123,7 @@
             <input type="checkbox" value="video games"id="cbox">
             <label for="">Video games</label><br><br>
             <label for="">Mobile Number</label>
-            <input type="tel"pattern="[0-9]{10}"required><br><br>
+            <input type="tel"pattern="[0-9]{10}" placeholder="Enter your mobile number" required><br><br>
             <label for="">Select Date And Time</label>
             <input type="datetime-local"required><br><br>
 
@@ -101,8 +132,44 @@
 
         </fieldset>
     </form>
+    <!--semantic-->
+    <section id="sec2">
+        <article id="art1">
+            <h2 id="art-h2">Rules & Regulations</h2>
+            <h4 id="art-h4">
+                <ul type="circle">
+                    <li>Admission to the college binds a student to observe college rules and all the directives that may be issued from time to time by the college authority.</li>
+                </ul>
+                <ol type="I">
+                    <li>All the students shall go to their classes in time without disturbing other classes.</li>
+
+                    <li>Loitering and Lounging in the college campus is strictly prohibited.</li>
+                        
+                    <li>Student shall take care of college furniture and must not spoil or cause any deliberate damage or tamper with the college property, fitting etc.</li>
+                        
+                    <li>Student should maintain a sense of decorum at all times both inside and outside the college. Those who are found guilty of serious misconduct may call punishment, including expulsion as permitted by regulations.</li>
+
+                </ol>
+
+            </h4>
+        </article>
+    </section>
+    <!--image map-->
+    <img src="assets/imgmap.jpg" alt="college" height="300px" width="550px" usemap="#college">
+    <map name="college">
+        <area shape="rect" coords="180,150,290,230" href="assets/clg1.jpg" alt="college">
+        <area shape="rect" coords="10,200,200,300" href="assets/trees.jpg" alt="trees">
+    </map>
+    <iframe src="http://www.nitte.edu.in" height="300px"width="550px">
+
+
+
+
+
+    <!--footer-->
     <footer>
         <h3 style="background-color: blueviolet;text-align: center;color: aliceblue;">All is well</h3><a href="login.html" style="text-align:center;">Click Here To Login </a>
+        <a href="mailto:bksachari27@gmail.com">Send Mail</a>
     </footer>
 </body>
 </html>

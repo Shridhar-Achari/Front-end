@@ -1,0 +1,183 @@
+
+<!--Date:24/03/2022-->
+<!--DLithe_Task05_HTML_CSS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLithe_Task05_HTML_CSS</title>
+    <style>
+        body{
+            background-image: url();
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        h2{
+            border:2px;
+            color: blue;
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+            background: #3E5151;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        /*--Absolute Relative--*/
+        .absolute{
+            position:absolute;
+            border-style: solid;
+            width: 250px;
+            height: 200px;
+            left:200px;
+            top: 150px;
+            color: white;
+            background: #3a6186;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .absolute::first-letter{
+            font-size: 30px;
+            background-color: aqua;
+        }
+        .relative{
+            position:relative;
+            border-style: solid;
+            width: 500px;
+            height: 500px;
+            left:200px;
+            top: 400px;
+        }
+        /*--Animation--*/
+        .animation{
+            height: 300px;
+            width:300px;
+            border-width: 2px;
+            border-style: solid red;
+            border-radius: 50%;
+            position: relative;
+            animation-name: emoji;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: 3s;
+            animation-direction: normal;
+            animation-duration: 7s;
+        }
+        @keyframes emoji{
+            0%{
+                background-image: url(assets/emoji1.png); top: 0px;left: 0px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            25%{
+                background-image: url(assets/emoji2.png);top:100px;left: 100px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            50%{
+                background-image: url(assets/emoji3.png);top:200px;left: 200px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            75%{
+                background-image: url(assets/emoji4.png);top:300px;left: 300px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            100%{
+                background-image: url(assets/emoji5.png);top:400px;left: 400px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+
+        }
+        /*--Transformation--*/
+        .transform{
+         
+            left: 150px;
+            position: relative; 
+            height: 100px;    
+            width: 100px;
+            border-style: 2px solid;
+        }
+        .transform img{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            height: 200px;
+            width: 200px;
+            left: 100px;
+            border-width: 3px;
+          
+            transition: width 3s, height 3s;
+        }
+        .transform img:hover{
+            width: 350px;
+            height: 350px;
+            border-radius: 50px;
+            border-style: dotted 4px;
+        }
+        /*--Transition--*/
+        .transition{
+            position: relative;
+            transition: width 2s;
+            transition-delay: 2s;
+            transition-duration: 7s;
+            transition-property: inherit;
+            transition-timing-function:ease-out ;
+        }
+      
+        .transition img{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            height: 200px;
+            width: 200px;
+            
+        }
+        .transition img:hover{
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>DLithe_Task05_HTML_CSS</h1>
+    <h2>Absolute Relative</h2>
+    <div class="absolute">
+        An emoji is a pictogram, logogram, ideogram or smiley embedded in text and used in electronic messages and web pages. The primary function of emoji is to fill in emotional cues otherwise missing from typed conversation.
+    </div>
+    <div class="relative">
+        <p class="absolute" style="font-size: 20px;font-family: 'Times New Roman', Times, serif;">
+            An emoji is a pictogram, logogram, ideogram or smiley embedded in text and used in electronic messages and web pages. The primary function of emoji is to fill in emotional cues otherwise missing from typed conversation.
+        </p>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <hr>
+
+    <h2>
+        Animation
+    </h2>
+    <div class="animation">
+      <!--  <img src="assets/Google.png" alt="emoji">
+        <img src="assets/Google.png" alt="emoji">
+        <img src="assets/Google.png" alt="emoji">
+        <img src="assets/Google.png" alt="emoji"> -->
+    </div>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+
+    <h2>Transformation</h2>
+    <div class="transform">
+        <img src="assets/trees.jpg" alt="smiley">
+    </div>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <h2>Transition</h2>
+    <div class="transition">
+        <img class="trans-img" src="assets/ganesha.jpeg" alt="car">
+
+    </div>
+
+    
+</body>
+</html>

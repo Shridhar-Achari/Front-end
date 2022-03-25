@@ -9,73 +9,102 @@
 <body>
     <script>
         var languages=["English","Kannada","Hindi"];
-        document.write("Original Array:<br>"+languages+"<br><br>");
+        document.write("Original Array:<br>"+languages+"<br><hr>");
 
         //length (array length)
-        document.write("Length of the Array:<br>"+languages.length+"<br><br>");
+        document.write("length()<br>Length of the Array:<br>Answer:"+languages.length+"<br><hr>");
 
         //push (Adding elements at the end of the array)
-        document.write("Array afer push:<br>"+languages.push("Tamil","Malayalam","Urdu")+"<br>");
-        document.write(languages+"<br><br>");
+        document.write("push()<br>Array afer pushing:Tamil,Malayalam,Urdu:<br>Answer:"+languages.push("Tamil","Malayalam","Urdu")+"<br>");
+        document.write(languages+"<br><hr>");
 
         //unshift (Adding elements at the beginning of the array)
-        document.write("Array after unhift:<br>"+languages.unshift("Telugu","Marati")+"<br>");
-        document.write(languages+"<br><br>");
+        document.write("unshift()<br>Array after unshifting:Telugu,Marati<br>Answer:"+languages.unshift("Telugu","Marati")+"<br>");
+        document.write(languages+"<br><hr>");
 
         //pop (delete at the end)
-        var last=languages.pop()+"<br>";
-        document.write("Element pop:"+last+"<br>");
-        document.write(languages+"<br><br>");
+        var last=languages.pop();
+        document.write("pop()<br>Element pop:"+last+"<br>");
+        document.write("Answer:"+languages+"<br><hr>");
 
         //shift (delete from beginning)
         var first=languages.shift();
-        document.write("Element deleted from beginning:"+first+"<br>");
-        document.write(languages+"<br><br><hr>");
+        document.write("shift()<br>Element deleted from beginning(shift):"+first+"<br>");
+        document.write("Answer:"+languages+"<br><hr>");
 
         //splice
         var animals=["dog","cat","elephant"];
-        document.write("Array:"+animals+"<br>")
+        document.write("splice<br>Array:"+animals+"<br>");
+
         animals.splice(1,0, "sheep");
-        document.write("After splice:"+animals+"<br><br>");
+        document.write("After splice(1,0, sheep):<br>Answer:"+animals+"<br><br>");
 
         
         animals.splice(3,1, "donkey");
-        document.write("After splicing(3,1):<br>");
-        document.write(animals+"<br><br>");
+        document.write("After splice(3,1, donkey):<br>");
+        document.write("Answer:"+animals+"<br><br>");
 
         //deleting 2 elements
         animals.splice(2,2);
-        document.write("After splicing:<br>");
-        document.write(animals+"<br><br><hr>");
+        document.write("After splice(2,2):<br>");
+        document.write("Answer:"+animals+"<br><hr>");
 
         //concatenation of arrays
         var plang1=["C","C++","DotNet","Java","Python"];
         var plang2=["Flutter","React","Angular"];
         var plang=plang1.concat(plang2);
-        document.write("Concatenated Array:"+plang+"<br><hr>");
+        document.write("concat()<br>Concatenated Array:"+plang+"<br><br>");
         var plang3=plang.concat("HTML","CSS");
-        document.write(plang3+"<br><hr>");
+        document.write(plang3+"<br><br>");
         var plang4=plang3.concat("Javascript","Node");
         document.write(plang4+"<br><hr>");
 
-        //entities
-        var iterateindex=plang4.entities();
+        //entries
+        document.write("entries()");
+        var iterateindex=plang4.entries();
         for(var item of iterateindex)
         {
             document.write(item+"<br>");
         }
+        
+        //reverse
+        document.write("<hr>reverse()<br>Reverse is:");
+        plang4.reverse();
+        document.write(plang4+"<br><hr>");
 
+        //indexof
+        var food=["idli","dosa","vada","chapati"];
+        document.write("Array Elements:<br>"+food+"<br>");
+        var res=food.indexOf("vada");
+        document.write("index of vada is:"+res+"<br><hr>");
 
+        //toString
+        document.write("To String:<br>");
+        document.write(food.toString()+"<br><hr>");
 
+        //join
+        document.write("Join:<br>");
+        document.write(food.join()+"<br><hr>");
 
+        //slice [last element excluded]
+        document.write("Slice(1,3):<br>");
+        var res1=food.slice(1,3);
+        document.write(res1+"<br>");
 
+        document.write("Slice(-3,-1):<br>");
+        var res2=food.slice(-3,-1);
+        document.write(res2+"<br><hr>");
 
-
-
-
-
-
-
+        //sort
+        document.write("Sort<br>The numbers are:7,9,2,6,1,4,8"+"<br>");
+        var numbers=[7,9,2,6,1,4,8];
+        document.write("After sort:"+numbers.sort()+"<br><hr>");
+        
+        //filter
+        document.write("Filter<br>Elements in array are:<br>");
+        var companies=["IBM","Infosys","Wipro","DataLyzer","Hexaware","DXC"];
+        var res3=companies.filter=(companies=>companies.length==5);
+        document.write(companies);
 
     </script>
     

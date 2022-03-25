@@ -13,16 +13,16 @@
 </head>
 <body>
     <h2>String Concatenation</h2>
-    <p id="ex1" style="border: 5px solid red;"></p>
-    <p id="ex2"></p>
-    <p id="ex3"></p>
-    <p id="ex4">Last index is:</p>
+    <p id="ex1" style="border: 5px solid red;"></p><br>
+    <h2>Elimination of "/" symbols</h2>
+    <p id="ex2" style="border: 5px solid greenyellow;"></p><br><br>
     <script>
         var str1="Shridhar";
         var str2="Achari";
-        var str3="Welcome to\"Javascript\" bootcamp";
+        var str3="Welcome to\ DLithe \  bootc\amp";
         var str4="Work is worship";
         var str5="Man makes money but money makes man mad";
+
         
         /*--String Concatenation--*/
         document.getElementById("ex1").innerHTML=str1+str2;
@@ -30,13 +30,21 @@
         /*--Eleminates the \ symbols--*/
         document.getElementById("ex2").innerHTML=str3;
 
+        /*Display Strings*/
+        document.write("Strings that taken for string operations in java script<br><br>");
+        document.write(str1+"<br>");
+        document.write(str2+"<br>");
+        document.write(str3+"<br>");
+        document.write(str4+"<br>");
+        document.write(str5+"<br><br><br>");
+        
         /*index of*/    
         var res=str4.indexOf("i");
-        document.getElementById("ex3").innerHTML=res;
+        document.write("Index of i in tHe string"+str4+"Answer is:"+res+"<br><br>")
 
         /*last index*/
         var res1=str5.lastIndexOf("money");
-        document.getElementById("ex4").innerHTML=res1;
+        document.write("Last indext of money in the string"+str5+"answet is"+res1+"<br><br>" );
         /*Lowercase*/
 
         document.write("Lower case string is:"+str1.toLowerCase()+"<br><br>" );

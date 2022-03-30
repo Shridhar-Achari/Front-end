@@ -7,39 +7,64 @@
     <title>JQuery Task</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        img{
-            object-fit: cover;
-            height: 200px;
-            width: 200px;
-        }
-        div{
-            float: left;
-            margin: 50px;
-            height: 100px;
-            width: 150px;
-            box-sizing: 3px;
-            border: coral;
-
+        h1{
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
         }
       
-       
+        h2{
+            text-align: center;
+            font-family: serif;
+        }
+        figure{
+            float: left;
+            margin: 10px;
+        }
+        figcaption{
+            text-align: center;
+            text-indent: 15px;
+            color: aliceblue;
+            font-family:serif;
+            background-color: black;
+        }
+        img{
+            object-fit: cover;
+            height: 150px;
+            width: 200px;
+        }
+        div{ 
+            float: left;
+            margin: 10px;
+            height: 150px;
+            width: 200px;
+            
+            box-sizing: 3px;
+            border-style: 4px solid black;
+        }
+        
+        .test{
+            background-color: black;
+            color: aliceblue;
+        }
     </style>
 </head>
 <body>
     <h1>JQUERY SELECTORS</h1>  
     <h2>LAXURY CARS</h2>
-    <img class="bmw" src="car_images/bmw1.jpg" alt="BMW">
-    <img class="Suzuki"src="car_images/bmw2.jpg" alt="SUZUKI">
-    <img class="Jaguar"src="car_images/Jaguar1.jpg" alt="JAGUAR">
-    <img class="bmw" src="car_images/bmw2.jpg" alt="BMW">
-    <img class="Audi" src="car_images/audi1.jpg" alt="AUDI">
-    <img class="bmw"src="car_images/bmw3.jpg" alt="BMW">
-    <img class="Suzuki"src="car_images/bmw4.jpg" alt="SUZUKI">
-    <img class="Audi"src="car_images/audi2.jpg" alt="AUDI">
-    <img class="Audi"src="car_images/audi3.jpg" alt="AUDI">
-    <img class="Suzuki"src="car_images/audi.jpg" alt="SUZUKI">
-    <img class="Jaguar"src="car_images/jaguar2.jpg" alt="JAGUAR"><br><hr>
-
+    <figure class="bmw"><img  src="car_images/bmw1.jpg" alt="BMW"><figcaption>BMW</figcaption></figure>
+    <figure class="bmw"><img src="car_images/bmw2.jpg" alt="BMW"><figcaption>BMW</figcaption></figure>
+    <figure class="Jaguar"><img src="car_images/Jaguar1.jpg" alt="JAGUAR"><figcaption>JAGUAR</figcaption></figure>
+    <figure class="bmw"><img src="car_images/bmw2.jpg" alt="BMW"><figcaption>BMW</figcaption></figure>
+    <figure class="Audi"><img src="car_images/audi1.jpg" alt="AUDI"><figcaption>AUDI</figcaption></figure>
+    <figure class="bmw"><img src="car_images/bmw3.jpg" alt="BMW"><figcaption>BMW</figcaption></figure>
+    <figure class="Suzuki"><img src="car_images/suzuki1.png" alt="SUZUKI"><figcaption>SUZUKI</figcaption></figure>
+    <figure class="Audi"><img src="car_images/audi2.jpg" alt="AUDI"><figcaption>AUDI</figcaption></figure>
+    <figure class="Audi"><img src="car_images/audi3.jpg" alt="AUDI"><figcaption>AUDI</figcaption></figure>
+    <figure class="Suzuki"><img src="car_images/suzuki2.jpg" alt="SUZUKI"><figcaption>SUZUKI</figcaption></figure>
+    <figure class="Jaguar"><img src="car_images/jaguar2.jpg" alt="JAGUAR"><figcaption>JAGUAR</figcaption></figure>
+    <figure class="Audi"><img src="car_images/audi.jpg" alt="AUDI"><figcaption>AUDI</figcaption></figure>
+    <br><br><br><br><br><br><br><br>
     <div id="div1">
     <h3 class="test">Class selector</h3>
     <p class="para">Hide BMW CARS</p>
@@ -79,9 +104,10 @@
                     $("*.Audi").show();
 
                 });
-            }); 
+                }); 
             </script>
-            <br></div><div>
+            <br></div>            
+            <div>
              <h3 class="test">Class selector</h3>
              <p class="para">Hide All JAGUAR CARS</p>
              <button class="btn3">Click Here</button>
@@ -119,8 +145,7 @@
                });
                });
            </script>
-           </div>
-           <br><hr>
+           </div><br><br><br><br><br><br><br>
             <div id="div2">
                  <h3 class="test">Class selector</h3>
                  <p class="para">Show BMW CARS</p>

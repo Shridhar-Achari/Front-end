@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Task</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img{
+            object-fit: cover;
+            height: 200px;
+            width: 200px;
+        }
+        div{
+            float: left;
+            margin: 50px;
+            height: 100px;
+            width: 150px;
+            box-sizing: 3px;
+            border: coral;
+
+        }
+      
+       
+    </style>
+</head>
+<body>
+    <h1>JQUERY SELECTORS</h1>  
+    <h2>LAXURY CARS</h2>
+    <img class="bmw" src="car_images/bmw1.jpg" alt="BMW">
+    <img class="Suzuki"src="car_images/bmw2.jpg" alt="SUZUKI">
+    <img class="Jaguar"src="car_images/Jaguar1.jpg" alt="JAGUAR">
+    <img class="bmw" src="car_images/bmw2.jpg" alt="BMW">
+    <img class="Audi" src="car_images/audi1.jpg" alt="AUDI">
+    <img class="bmw"src="car_images/bmw3.jpg" alt="BMW">
+    <img class="Suzuki"src="car_images/bmw4.jpg" alt="SUZUKI">
+    <img class="Audi"src="car_images/audi2.jpg" alt="AUDI">
+    <img class="Audi"src="car_images/audi3.jpg" alt="AUDI">
+    <img class="Suzuki"src="car_images/audi.jpg" alt="SUZUKI">
+    <img class="Jaguar"src="car_images/jaguar2.jpg" alt="JAGUAR"><br><hr>
+
+    <div id="div1">
+    <h3 class="test">Class selector</h3>
+    <p class="para">Hide BMW CARS</p>
+      <button class="btn1">Click HERE</button>
+            <script>
+                $(document).ready(function()
+                {
+                $(".btn1").click
+                (function()
+                {
+                    $("*.bmw").hide();
+                });
+                $(".btn5").click
+                (function()
+                {
+                    $("*.bmw").show();
+                });
+                });
+            </script>
+            <br> </div><div>            
+             <h3 class="test">Class selector</h3>
+             <p class="para">Hide All AUDI CARS</p>
+             <button class="btn2">Click Here</button>
+             <script>
+                $(document).ready(function()
+                {
+                $(".btn2").click
+                (function()
+                {
+                    $("*.Audi").hide();
+
+                });
+            
+                $(".btn6").click
+                (function()
+                {
+                    $("*.Audi").show();
+
+                });
+            }); 
+            </script>
+            <br></div><div>
+             <h3 class="test">Class selector</h3>
+             <p class="para">Hide All JAGUAR CARS</p>
+             <button class="btn3">Click Here</button>
+             <script>
+                $(document).ready(function()
+                {
+                $(".btn3").click
+                (function()
+                {
+                    $("*.Jaguar").hide();
+                });
+                $(".btn7").click
+                (function()
+                {
+                    $("*.Jaguar").show();
+                });
+                });
+            </script>
+            <br></div><div>
+            <h3 class="test">Class selector</h3>
+            <p class="para">Hide All SUZUKI CARS</p>
+            <button class="btn4">Click Here</button>
+            <script>
+               $(document).ready(function()
+               {
+               $(".btn4").click
+               (function()
+               {
+                   $("*.Suzuki").hide();
+               });
+               $(".btn8").click
+               (function()
+               {
+                   $("*.Suzuki").show();
+               });
+               });
+           </script>
+           </div>
+           <br><hr>
+            <div id="div2">
+                 <h3 class="test">Class selector</h3>
+                 <p class="para">Show BMW CARS</p>
+                  <button class="btn5">Click HERE</button><br> </div>
+            <div>     
+                <h3 class="test">Class selector</h3>
+                <p class="para">Show All AUDI CARS</p>
+                <button class="btn6">Click Here</button>
+                <br>
+                </div>
+            <div>
+                <h3 class="test">Class selector</h3>
+                <p class="para">Show All JAGUAR CARS</p>
+                <button class="btn7">Click Here</button>
+                <br>
+            </div>
+            <div>
+                <h3 class="test">Class selector</h3>
+                <p class="para">Show All SUZUKI CARS</p>
+                <button class="btn8">Click Here</button>
+                <br><br><br>
+           </div>
+    </body>
+</html>

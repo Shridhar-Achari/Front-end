@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dlithe Task 10</title>
+    <script src="script.js"></script>
+    <style>
+        body{
+            background: #bdc3c7;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-size: 20px;
+            color: floralwhite;
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: blueviolet;
+            border-radius: 10px;
+            height: 40px;
+            text-align: center;
+        }
+        h3{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(226, 43, 186);
+            border-radius: 10px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>DLithe Task10 Date-28/03/2022</h2>
+    <h3>1. Conditional Statements</h3>
+        <script>
+            var name=prompt("Enter your name");
+            var mark=prompt("Enter your Score");
+            document.write("A. IF-ELSE<br>");
+            if(mark>=85 && mark<=100)
+            {
+                document.write("Hello "+name+"<br>");
+                document.write("Your score:"+mark+"<br>And your grade is: Distinction<br>");
+            }
+            else if(mark>=60)
+            {
+                document.write("Hello "+name+"<br>");
+                document.write("Your score:"+mark+"<br>"+"And your grade is: First Class<br>");
+            }
+            else if(mark>=50)
+            {
+                document.write("Hello "+name+"<br>");
+                document.write("Your score:"+mark+"<br>And your grade is: Second Class<br>");
+            }
+            else if(mark>=35)
+            {
+                document.write("Hello "+name+"<br>");
+                document.write("Your score:"+mark+"<br>And your grade is: Third Class<br>");  
+            }
+            else if(mark>=0 && mark<35)
+            {
+                document.write("Hello "+name+"<br>");
+                document.write("Your score:"+mark+"<br>And your grade is: Fail<br>");  
+            }
+            else
+            {
+                document.write("Hello "+name+"<br>");
+                document.write("Invalid mark entered<br>"); 
+            }
+            document.write("<br>B.SWITCH<br>");
+            switch(mark)
+            {
+            case mark1:if(mark>85&&mark<100)
+                document.write("Your grade is:A+");
+            break;
+            case mark2:if(mark>=60)
+                document.write("Your grade is:A");
+                break;
+            case mark3:if(mark>=50)
+                document.write("Your grade is:B");
+                break;
+            case mark4:if(mark>=35)
+                document.write("Your grade is:C");
+                break;
+            case mark5:if(mark>=0&&mark<35)
+                document.write("Your grade is:C");
+                break;
+            default:document.write("Invalid Score");
+            }
+        </script>
+    <h3>2. Looping Statements</h3>
+
+    <h3>3. Functions with parameters</h3>
+
+    <h3>4. Explore new events in JS</h3>
+    <button type="button" onclick="addition()">Addition</button>
+    
+    <button type="button" onclick="sub()">Substraction</button>
+    <button type="button" onclick="mul()">Multiplication</button>
+    <form action="" id="frm" style="height: 200px; width: 200px;">
+        background-color <select name="color" onchange="change()" id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+
+        </select>
+
+    </form>
+    <p id="message" style="position:absolute;top: 100px; left: 100px; visibility: hidden;" onmousedown="display(event)" onmouseup="hide()">Don't click here</p>
+
+    
+    <h3>5. Confirm and Prompt</h3>
+
+    
+
+
+
+    
+</body>
+</html>

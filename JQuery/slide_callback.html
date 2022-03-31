@@ -2,7 +2,6 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     .panel1,
     .panel {
@@ -22,10 +21,6 @@
       display: none;
     }
     </style>
-  
-  
-  
-  
   <script>
     $(document).ready(function () {
       $(".panel").click(function () {
@@ -50,8 +45,6 @@
   </div>
   <button class="sup">Slideup</button>
   <hr>
-
-
   <!--Display alert after-->
   <h1>JQuery Callback with slidedown function</h1>
   <script>
@@ -73,7 +66,6 @@
       });
     });
   </script>
-
   <br>
   <button class="call">Callback Function</button>
   <p class="dl">Hello, This is DLithe, How can I help you!!!!</p>
@@ -81,22 +73,13 @@
   <button class="call2">Without callback</button>
   <h6 >Thank you for your interest....</h6>
   <hr>
-
-
-
-
-
-
-
-
-
 <!--Chaining-->
   <h1>JQuery Chaining</h1>
   <script>
     $(document).ready(function () {
       $(".cbtn").click(function () {
         $(".ccolor").css("color","white").css("font-size","30px").css("background-color","black").slideUp(2000).slideDown(2000).fadeout(1000);
-        $(".chp").slideToggle().css("color", "yellow").css("font-size", "30px");
+        $(".chp").css("color", "red").css("font-size", "30px").slideToggle(2000).fadeout(1000);
       });
     });
   </script>
@@ -104,9 +87,7 @@
   <div class="ccolor">DLithe Consultancy Service</div><br><br>
   <p class="chp">Address: SLV Arcade, Dr Vishnuvardhan Rd,Phase 3, Banashankari, Bengaluru, Karnataka 560085</p>
     <button class="cbtn">Click here for Chaining</button>
-    
-    <br><br><br><hr>
-
+    <br><br><br>
     <script> 
         $(document).ready(function(){
           $(".anibtn1").click(function(){
@@ -122,8 +103,8 @@
     <script> 
         $(document).ready(function(){
           $(".himg").click(function(){
-            $(".himg").animation('slow',8000)({
-                left: '400px',
+            $(".himg").animate({
+                left: '1200px',
                 height:'200px',
                 width:'200px',                
             });
@@ -142,8 +123,6 @@
             });
           });
           </script>
-  
-         
         <h1>JQuery Animation</h1>
         <div style="background-image: url(car_images/jaguar2.jpg);height:100px;width:150px;position:relative;opacity: 0.5;background-repeat: no-repeat;background-size: 100% 100%;" class="ani"></div><br>
         <button class="anibtn1">Start Animation</button>
@@ -170,7 +149,9 @@
                 });
             });
         </script>
-        <h3>DLithe Consultancy Services</h3> <br>
+        <h3>DLithe Consultancy Services</h3>
+        <h3>jgjkgkjhdsf</h3>
+        <h3>ksffbsdf</h3>
         <br><hr>
     
 </body>

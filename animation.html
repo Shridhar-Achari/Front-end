@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .anim{
+           height: 500px;
+           width: 800px;
+            position: relative;
+            animation-name: car;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: 3s;
+            animation-direction:alternate-reverse;
+            animation-duration: 6s;
+        }
+        @keyframes car{
+            0%{
+                background-image: url(assets/car1.png);top: 10px;left: 0px;background-repeat: no-repeat;background-size:cover;
+            }
+            25%{
+                background-image: url(assets/car2.png);top: 10px;left: 200px;background-repeat: no-repeat;background-size:cover;
+            }
+            50%{
+                background-image: url(assets/car3.png);top: 10px;left: 400px;background-repeat: no-repeat;background-size: cover;
+            }
+            75%{
+                background-image: url(assets/car4.png);top: 10px;left: 400px;background-repeat: no-repeat;background-size: cover;
+            }
+            100%{
+                background-image: url(assets/car5.png);top: 10px;left: 800px;background-repeat: no-repeat;background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="anim"></div>
+</body>
+</html>

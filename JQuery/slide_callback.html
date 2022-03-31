@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .panel1,
+    .panel {
+        height: 30px;
+        width: 400px;
+      padding: 5px;
+      font-size: 18px;
+      text-align: center;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      border: solid 1px rgb(255, 255, 255);
+      border-radius: 3px;
+    }
+
+    .panel1 {
+      padding: 5px;
+      display: none;
+    }
+    </style>
+  
+  
+  
+  
+  <script>
+    $(document).ready(function () {
+      $(".panel").click(function () {
+        $(".panel1").slideDown(5000);
+      });
+      $(".stop").click(function () {
+        $(".panel1").stop();
+      });
+      $(".sup").click(function () {
+        $(".panel1").slideUp();
+      });
+    });
+  </script>
+</head>
+
+<!--Sliding-->
+<body>
+  <h1>jQuery Slide Down, Slide Up Function</h1>
+  <button class="stop">Stop Slide</button>
+  <div class="panel">Click Here To Slide Down</div>
+  <div class="panel1">Welcome To DLithe Training
+  </div>
+  <button class="sup">Slideup</button>
+  <hr>
+
+
+  <!--Display alert after-->
+  <h1>JQuery Callback with slidedown function</h1>
+  <script>
+    $(document).ready(function () {
+      $(".call").click(function () {
+        $("p").hide("slow", function () {
+          alert("Paragrapg hidden");
+        });
+      });
+    });
+  </script>
+ <!--Display alert before and on the same it display paragraph using slidedown function-->
+  <script>
+    $(document).ready(function () {
+      $(".call2").click(function () {
+        $("h6").hide(1000);
+        alert("Paragraph will hide now");
+        $(".dl").slideDown(1000);
+      });
+    });
+  </script>
+
+  <br>
+  <button class="call">Callback Function</button>
+  <p class="dl">Hello, This is DLithe, How can I help you!!!!</p>
+  <br>
+  <button class="call2">Without callback</button>
+  <h6 >Thank you for your interest....</h6>
+  <hr>
+
+
+
+
+
+
+
+
+
+<!--Chaining-->
+  <h1>JQuery Chaining</h1>
+  <script>
+    $(document).ready(function () {
+      $(".cbtn").click(function () {
+        $(".ccolor").css("color","white").css("font-size","20px").css("background-color","black").slideUp(2000).slideDown(2000).fadeout(1000);
+        $(".cpara").slideToggle(1000).css("color", "purple").css("font-size", "30px");
+      });
+    });
+  </script>
+  <br>
+  <div class="ccolor">DLithe Consultancy Service</div>
+  
+  <pre class="cpara" style="font-size: 15px;">Address: SLV Arcade, Dr Vishnuvardhan Rd, 
+    Phase 3, Banashankari, Bengaluru, 
+    Karnataka 560085</pre>
+    <button class="cbtn">Click here for Chaining</button>
+    
+    <br><br><br><hr>
+</body>
+</html>

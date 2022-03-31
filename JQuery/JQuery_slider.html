@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJQuery lider</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/le-frog/jquery-ui.css"
+    rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+<body>
+    <script>
+        $(function() {
+           $( ".slider1" ).slider();
+           $(".slider1").tooltip();
+        });
+
+        $(function() {
+           $( ".slider2" ).slider({
+               range:true,
+              min: 0,
+              max: 500,
+              values: [ 35, 200 ],
+              slide: function( event, ui ) {
+                 $( "#price" ).val( "Rs" + ui.values[ 0 ] + " - Rs" + ui.values[ 1 ] );
+              }
+           });
+           $( "#price" ).val( "Rs" + $( "#slider-2" ).slider( "values", 0 ) +
+              " - Rs" + $( "#slider-2" ).slider( "values", 1 ) );
+        });
+
+
+        $(function() {
+           
+           $( ".slider4" ).slider({
+              orientation:"vertical",
+              value:50,
+              slide: function( event, ui ) {
+                 $( "#minval" ).val( ui.value );
+              }	
+           });
+           $( "#minval" ).val( $( ".slider4" ).slider( "value" ) );
+        });
+     </script>
+      <div class = "slider1" title="Tooltip"></div>
+      <hr>
+      <p>
+        <label for = "price">Price range:</label>
+        <input type = "text" id = "price" 
+           style = "border:0; color:#1808eb; font-weight:bold;">
+     </p>
+     <div class = "slider2"></div>
+     <hr>
+     <div class = "slider3"></div>
+      <p>
+         <label for = "minval">Volume:</label>
+         <input type = "text" id = "minval" 
+            style = "border:0; color:#b9cd6d; font-weight:bold;">
+      </p>
+      <div class = "slider4"></div>
+    
+</body>
+</html>

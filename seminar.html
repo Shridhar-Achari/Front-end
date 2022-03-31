@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Animations</title>
+    <style>
+       /*--Animation--*/
+       .animation{
+            height: 300px;
+            width:300px;
+            border-width: 2px;
+            border-style: solid red;
+            border-radius: 50%;
+            position: relative;
+            animation-name: emoji;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-direction:alternate;
+            animation-duration: 5s;
+        }
+        @keyframes emoji{
+            0%{
+                background-image: url(assets/emoji1.png); top:10px;left: 0px;background-repeat: no-repeat;background-size: 100% 100%;
+            }
+            25%{
+                background-image: url(assets/emoji2.png);top:50px;left: 150px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            50%{
+                background-image: url(assets/emoji3.png);top:0px;left: 300px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            75%{
+                background-image: url(assets/emoji4.png);top:80px;left: 450px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            100%{
+                background-image: url(assets/emoji5.png);top:10px;left: 600px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+
+        }
+        .anim{
+            height: 300px;
+            width:300px;
+            border-width: 2px;
+            border-style: solid red;
+            border-radius: 50%;
+            position: relative;
+            animation-name: car;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: 3s;
+            animation-direction:normal;
+            animation-duration: 8s;
+
+        }
+        @keyframes car{
+            0%{
+                background-image: url(assets/car1.png); top: 100px;left: 0px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            25%{
+                background-image: url(assets/car2.png);top:100px;left: 250px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            50%{
+                background-image: url(assets/car3.png);top:100px;left: 500px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            75%{
+                background-image: url(assets/car4.png);top:100px;left: 750px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+            100%{
+                background-image: url(assets/car5.png);top:100px;left: 1000px;background-repeat: no-repeat;background-size: 100px;background-size: 100% 100%;
+            }
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Emoji Animation</h1><br>
+   <div class="animation"></div>  
+   <h1>Car Animation</h1><br> 
+   <div class="anim"></div> 
+   <marquee behavior="" direction=""></marquee> 
+</body>
+</html>

@@ -108,5 +108,23 @@
     <button class="cbtn">Click here for Chaining</button>
     
     <br><br><br><hr>
+
+    <script> 
+        $(document).ready(function(){
+          $("button").click(function(){
+            $(".animate").animate({
+              left: '250px',
+              opacity: '0.5',
+              height: '100px',
+              width: '100px',
+              color:'white'
+            });
+          });
+        });
+        </script> 
+        <h1>JQuery Animation</h1>
+        <div class="animate"style="background:#5a05e4;height:100px;width:100px;position:relative;margin-top:300px;">
+            DLithe Consultancy Service
+        </div>
 </body>
 </html>

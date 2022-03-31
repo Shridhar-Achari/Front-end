@@ -2,6 +2,7 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     .panel1,
     .panel {
@@ -94,37 +95,83 @@
   <script>
     $(document).ready(function () {
       $(".cbtn").click(function () {
-        $(".ccolor").css("color","white").css("font-size","20px").css("background-color","black").slideUp(2000).slideDown(2000).fadeout(1000);
-        $(".cpara").slideToggle(1000).css("color", "purple").css("font-size", "30px");
+        $(".ccolor").css("color","white").css("font-size","30px").css("background-color","black").slideUp(2000).slideDown(2000).fadeout(1000);
+        $(".chp").slideToggle().css("color", "yellow").css("font-size", "30px");
       });
     });
   </script>
   <br>
-  <div class="ccolor">DLithe Consultancy Service</div>
-  
-  <pre class="cpara" style="font-size: 15px;">Address: SLV Arcade, Dr Vishnuvardhan Rd, 
-    Phase 3, Banashankari, Bengaluru, 
-    Karnataka 560085</pre>
+  <div class="ccolor">DLithe Consultancy Service</div><br><br>
+  <p class="chp">Address: SLV Arcade, Dr Vishnuvardhan Rd,Phase 3, Banashankari, Bengaluru, Karnataka 560085</p>
     <button class="cbtn">Click here for Chaining</button>
     
     <br><br><br><hr>
 
     <script> 
         $(document).ready(function(){
-          $("button").click(function(){
-            $(".animate").animate({
+          $(".anibtn1").click(function(){
+            $(".ani").animate({
               left: '250px',
-              opacity: '0.5',
-              height: '100px',
-              width: '100px',
-              color:'white'
+              opacity: '1',
+              height: '400px',
+              width: '600px',
             });
           });
         });
-        </script> 
+    </script> 
+    <script> 
+        $(document).ready(function(){
+          $(".himg").click(function(){
+            $(".himg").animation('slow',8000)({
+                left: '400px',
+                height:'200px',
+                width:'200px',                
+            });
+          });
+        });
+        </script>
+        <script>
+          $(document).ready(function(){
+            $(".anibtn2").click(function(){
+              $(".animate").animate({
+                left: '250px',
+                height: '+=100px',
+                width: '+=100px',
+                opacity:'1'
+              });
+            });
+          });
+          </script>
+  
+         
         <h1>JQuery Animation</h1>
-        <div class="animate"style="background:#5a05e4;height:100px;width:100px;position:relative;margin-top:300px;">
-            DLithe Consultancy Service
+        <div style="background-image: url(car_images/jaguar2.jpg);height:100px;width:150px;position:relative;opacity: 0.5;background-repeat: no-repeat;background-size: 100% 100%;" class="ani"></div><br>
+        <button class="anibtn1">Start Animation</button>
+        <div class="animate" style="background-image: url(car_images/audi2.jpg);height:100px;width:150px;position:relative;opacity: 0.5;background-repeat: no-repeat;background-size: 100% 100%;"></div>
         </div>
+        <button class="anibtn2">Click Again</button>
+        <h1>Animation with Effect</h1>
+        <div class="himg" style="background-image: url(car_images/horse.gif);position:relative;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;width: 200px;"></div><br><br>
+
+
+        <h1>JQuery on()</h1><br>
+        <script>
+            $(document).ready(function(){
+                $("h3").on({
+                    mouseenter:function(){
+                        $(this).css("background-color", "blue").css("font-size","30px");
+                    },
+                    mouseenter:function(){
+                        $(this).css("background-color", "red").css("font-size","30px");
+                    },
+                    mouseenter:function(){
+                        $(this).css("background-color", "green").css("font-size","30px");
+                    }
+                });
+            });
+        </script>
+        <h3>DLithe Consultancy Services</h3> <br>
+        <br><hr>
+    
 </body>
 </html>

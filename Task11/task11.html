@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+    <!--JQuery css-->
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/le-frog/jquery-ui.css" rel = "stylesheet">
+    <!--JQuery js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+      #ul{
+          float: left;
+      }
+      #li{
+          float:left;
+          background-color: black;
+          color: antiquewhite;
+          font-size: 18px;
+      }
+
+  </style>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <ul class="list-group" id="ul">
+          <li id="li" class="list-group-item list-group-item-action" onclick="object()">JS Object & Properties</li>
+          <li id="li" class="list-group-item list-group-item-action" onclick="classes()">JS Classes</li>
+          <li id="li" class="list-group-item list-group-item-action" onclick="proto()">JS Prototype</li>
+          <li id="li" class="list-group-item list-group-item-action" onclick="abstrac()">JS Abstraction</li>
+          <li id="li" class="list-group-item list-group-item-action" onclick="encap()">JS Encapsulation</li>
+          <li id="li" class="list-group-item list-group-item-action" onclick="poly()">JS Polymorthism</li>
+          <li id="li" class="list-group-item list-group-item-action" onclick="inherit()">JS Inheritance</li>
+        </ul>
+        </div>  
+    </header>
+    <div class="container">
+        <h1>DLithe_Task11_JS_OOPS</h1>
+    </div>
+    
+    <!--Object Properties-->
+    <div class="container" id="jobj">
+    <h3>Object Properties Answers:</h3>
+    <div class="container-fluid">
+            <form role="form" method="POST">  
+            <div class="form-group">  
+              <label for="fname" style="color: rgb(0, 0, 0);">First Name:</label>  
+              <input type="text" class="form-control" class="fname" placeholder="Enter First Name" required>  
+            </div>  
+            <div class="form-group">  
+              <label for="lname" style="color: rgb(0, 0, 0);">Last Name:</label>  
+              <input type="text" class="form-control" id="lname" placeholder="Enter Last Name"required>  
+            </div>  
+            <div class="form-group">  
+                <label for="age" style="color: rgb(0, 0, 0);">Age:</label>  
+                <input type="number" class="form-control" id="age" placeholder="Enter your age"required>  
+              </div> 
+            <button type="submit" class="btn btn-light" value="Submit">Submit</button>  
+          </form>  
+        <p id="p1"></p>
+    
+        <script>
+        function object(){
+        const student={
+        fname:document.querySelector(".fname"),
+        lname:document.getElementById('#lname'),
+        age:document.getElementById('#age')
+    };
+    let st_details="";
+    for(let st in student){
+        st_details += student[st] + " ";
+    }
+        document.getElementById("p1").innerHTML=st_details;
+    }   
+    </script>
+    <button id="jbtn1" class="btn btn-danger"onclick="hide()">Hide</button>
+    </div>
+</div>
+
+    <!--Javascript Class-->
+    <div class="container" id="jclass">
+    <h3>JavaScript Class Answers:</h3>
+    <div class="container-fluid">
+        <p id="p2" class=""></p>
+    </div>
+    <script>
+        function classes(){
+            class info{
+                constructor(sname,lname,sage){
+                    this.sname=sname;
+                    this.lname=lname;
+                    this.sage=sage;
+                }
+            }
+            const myinfo =new info("Ramesh","Aravind",26);
+            document.getElementById("p2").innerHTML=myinfo.sname+" "+myinfo.lname+" "+myinfo.sage;  
+        }  
+    </script>
+    <button id="jbtn2" class="btn btn-danger"onclick="hide()">Hide</button>
+    </div>
+
+
+
+
+
+     <!--Javascript Prototypes-->
+     <div class="container" id="jproto">
+        <h3>JavaScript Prototype Answers:</h3>
+     <div class="container-fluid">
+         <p id="p3"></p>
+     </div>
+     <script>
+         function proto(){
+            function student(fname,lname,age){
+                this.firstname=fname;
+                this.lastname=lname;
+                this.sage=age;
+            }
+            student.prototype.course="MCA"
+            var newcourse = new student("Harisk","SH",26);
+            document.getElementById("p3").innerHTML=("First Name:"+" "+newcourse.firstname+"<br>"+"Last Name:"+" "+newcourse.lastname+"<br>"+"Age:"+" "+newcourse.sage+"<br>"+"Course:"+" "+newcourse.course+"<br>");
+        }
+     </script> 
+     <button id="jbtn3" class="btn btn-danger" onclick="hide()">Hide</button>
+    </div> 
+
+
+
+
+
+
+      <!--Javascript Abstraction-->
+      <div class="container" id="jabstract">
+        <h3>JavaScript Abstraction Answers:</h3>
+      <div class="container-fluid">
+          <p id="p4"></p>
+      </div>
+      <script>
+           function abstrac(){
+             function student(){
+               this.fname="fname";
+               this.lname="lname";
+               this.mark="mark";
+               throw new Error("You cannot create an instance of Abstract Class");
+             }
+             student.prototype.display=function()
+             {
+               return "First Name: "+this.fname+"<br>"+"Last Name: "+this.lname+"<br>"+"Mark: "+this.mark+"<br>";
+             }
+             function print(fname,lname,mark){
+               this.fname=fname;
+               this.lname=lname;
+               this.mark=mark;
+             }
+             print.prototype=Object.create(student.prototype);
+             var pt=new print("Shridhar","Achari",98);
+             document.getElementById("p4").innerHTML=(pt.display());             
+           }
+
+      </script>
+      <button id="jbtn4" class="btn btn-danger" onclick="hide()">Hide</button>
+      </div>
+
+
+
+
+    <!--Javascript Encapsulation-->
+    <div class="container" id="jencap">
+        <h3>JavaScript Encapsulation Answers:</h3>
+      <div class="container-fluid">
+          <p id="p5"></p>
+      </div>
+      <script>
+          function encap(){
+            class student{
+              constructor(){
+                var fname;
+                var lname
+                var mark;
+              }
+              getFname()
+              {
+                return this.fname;
+              }
+              setFname(fname)
+              {
+                this.fname=fname;
+              }
+              getLname()
+              {
+                return this.lname;
+              }
+              setLname(lname)
+              {
+                this.lname=lname;
+              }
+              getMark(mark)
+              {
+                return this.mark;
+              }
+              setMark(mark)
+              {
+                this.mark=mark;
+              }
+            }
+            var stud=new student();
+            stud.setFname("Gagan");
+            stud.setLname("Shetty");
+            stud.setMark("90");
+            document.getElementById("p5").innerHTML=("First Name: "+stud.getFname()+"<br>"+"Last Name: "+stud.getLname()+"<br>"+"Mark: "+stud.getMark());
+           }
+      </script>
+      <button id="jbtn5" class="btn btn-danger" onclick="hide()">Hide</button>
+      </div>
+
+
+      <!--Javascript Polymorphism-->
+      <div class="container" id="jpoly">
+        <h3>JavaScript Polimorphism Answers:</h3>
+      <div class="container-fluid">
+          <p id="p6"></p>
+      </div>
+      <script>
+        function poly(){
+          function add()
+        {
+            if(arguments.length==0)
+            {
+                var a=a;
+                document.getElementById("p6").innerHTML=("If parameter 1:"+a);
+            }
+            else if(arguments.length==2)
+            {
+              var sum=0;
+              var length=arguments.length;
+              document.getElementById("p6").innerHTML=("If parameter 2"+a);
+            }
+            else
+            {
+                var sum=0;
+                var length=arguments.length;
+                for(var i=0;i<length;i++)
+                {
+                    sum+=arguments[i];
+                }
+                document.getElementById("p6").innerHTML=("If more than 2 parameter:"+sum);
+            }
+        }
+        add();
+        add(10);
+        add(2,2);
+        add(2,4,6,8,10);
+        }
+      </script>
+      <button id="jbtn6" class="btn btn-danger" onclick="hide()">Hide</button>
+      </div>
+
+
+
+      <!--Javascript Inheritance-->
+      <div class="container" id="jinherit">
+        <h3>JavaScript Inheritance Answers:</h3>
+      <div class="container-fluid">
+          <p id="p7"></p>
+          <button id="jbtn7" class="btn btn-danger" onclick="hide()">Hide</button>
+      </div>
+      <script>
+      function inherit(){
+      function Person(fname, lname, age) {
+      this.fname = fname;
+      this.lname = lname;
+      this.age = age;
+      
+   }
+   Person.prototype.welcome = function () {
+    document.getElementById("p7").innerHTML=("First Name: "+this.fname+"<br>"+"Last Name: "+this.lname +"<br>"+"Age:"+this.age+"<br>");
+   };
+      let person1 = new Person("Girish", "Acharya", 25);
+      person1.welcome();
+      let person2 = new Person("Ganesh", "Kumar" ,24);
+      person2.welcome();
+      }
+</script>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+
+</body>
+</html>

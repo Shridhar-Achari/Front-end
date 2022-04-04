@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="JScript/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+    <!--jquery style-->
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/le-frog/jquery-ui.css" rel = "stylesheet">
+  
+    <!--ajax,jquery,js library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+    
+   <!--Bootstrap-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <style>
+            #accordion{
+            font-size: 15px;
+             font-family:sans-serif;
+             background-color:blue;
+             color:white;
+             border-radius: 20px;
+             padding: 20px;
+             width: 800px;
+             margin-left: 300px;
+            }
+            h2{
+                font-size: 45px;
+                margin-left: 220px;
+               
+            }
+            #left{
+                margin-left:220px;
+             
+            }
+       </style>     
+</head>
+<body  style="background-image: url(assets/bag1.jpg);background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+   
+    <div class="container"> 
+        <header>
+            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/bag3.jpg);background-repeat: no-repeat;background-size: cover; color: white; text-shadow: 4px 5px 4px rgb(54, 52, 52);">  
+                <div class="container" >
+                    <img src="assets/logo3.png" alt="logo" height="150px" width="150px" style="float: left;">
+                  <h2>SHRIDHAR TECHNOLOGIES</h2>          
+                <p id="left">Best Online Service Provider</p>  
+              </div> <br>
+            <p><span class="glyphicon glyphicon-envelope"></span> shridharachar2706@gmail.com 
+                <span class="glyphicon glyphicon-earphone"></span> +91 9008546996
+                <span class="glyphicon glyphicon-map-marker"></span> Kundapura
+            </p></div><br>
+        </header>  
+        <div class="list-group">  
+          <a href="#" class="list-group-item">Welcome</a>  
+          <a href="#" class="list-group-item active">Login/Registration</a>
+          <a href="#" class="list-group-item">About Us</a>  
+          <a href="#" class="list-group-item">Contact Us</a>  
+          <a href="#" class="list-group-item">Menu</a>  
+          <a href="#" class="list-group-item">Logout</a>  
+        </div>  
+      </div>  
+      <hr><br>
+    <h3 class="service">Out Services</h3>
+    <script>
+       $(function() {
+               $( "#accordion" ).accordion({
+                  collapsible: true
+             });
+            });
+        </script>
+   <div id="accordion" class="accordion">
+       <h3>Engineering</h3>
+       <div>
+         <ul type="circle">
+           <li>Product Engineering</li>
+            <li>Platform Engineering</li>
+            <li>Operational Technology Services</li>
+            <li>NextGen Engineering</li>
+         </ul>
+       </div>
+       <h3>Business</h3>
+       <div>
+         <ul class>
+            <ol type="i">Digital Foundation
+                <li>Hybrid Cloud Services</li>
+                <li>Digital Workplace Services</li>
+                <li>NextGen Network Services</li>
+                <li>CyberSecurity & GRC Services</li>
+             </ol>
+                <ol type="A">Digital Business
+                    <li>Digital Consulting</li>
+                    <li>Applications</li>
+                    <li>Data and Analytics</li>
+                    <li>IoT WoRKS™</li>
+                </ol> 
+                <ol type="a">Digital Operations
+                    <li>Cybersecurity Fusion Centers</li>
+                    <li>Process Operations</li>
+             </ol>
+         </ul>
+       </div>
+       <h3>Eco-Systems</h3>
+       <div>
+         <ul>
+            <li>Strategic Alliance Partner Ecosystem</li>
+            <li>Start-up Ecosystem</li>
+            <li>Industry Ecosystem</li>
+            <li>#HCLCloudSmart</li>
+         </ul>
+       </div>
+       <h3>Products & Platforms</h3>
+       <div>
+           <ul>
+        <li>HCL Software</li>
+            <li>Industry Software Division</li>
+            <li>DRYiCE™ Software</li>
+            <li>Actian Avalanche Hybrid Cloud Data Platform</li>
+            <li>Banking Transformation Platform</li>
+            <li>Nippon - Workforce Analytics Solution</li>
+        </ul>
+       </div>
+     </div><br><br>
+        <footer class="page-footer font-small special-color-dark pt-4">
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid">  
+                    <div class="container">  
+                      <h1>SHRIDHAR TECHNOLOGIES</h1>          
+                    <p>Best Online Service Provider</p>  
+                  </div></div> 
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <form class="form-inline">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search">
+                    <button type="button" class="btn btn-success">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                      </button>
+                  </form>          
+                </div>
+                <div class="col-md-6 mb-4">
+                  <form class="form-inline">
+                    <input type="text" class="form-control form-control-sm" placeholder="Enter Your email">
+                        <button type="button" class="btn btn-success">
+                            <span class=""></span> Sign Up
+                          </button><br><br>
+                  </form>
+                </div>          
+              </div>          
+            </div>          
+            <div class="footer-copyright text-center py-3">© 2022 Copyright:
+              <a href="/"> SHTech@gmail.com</a>
+            </div>
+      </footer>   
+</body>
+</html>
